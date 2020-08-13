@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Mod Settings -->
+  <NPCBonus.Name>NPC Bonus</NPCBonus.Name>
+  <NPCBonus.PreAppPct>Pre-Industrial Apparel allowance adjustment [%]:</NPCBonus.PreAppPct>
+  <NPCBonus.PreWpnPct>Pre-Industrial Weapon allowance adjustment [%]:</NPCBonus.PreWpnPct>
+  <NPCBonus.PreTchPct>Pre-Industrial Tech allowance adjustment [%]:</NPCBonus.PreTchPct>
+  <NPCBonus.AppPct>Industrial Apparel allowance adjustment [%]:</NPCBonus.AppPct>
+  <NPCBonus.WpnPct>Industrial Weapon allowance adjustment [%]:</NPCBonus.WpnPct>
+  <NPCBonus.TchPct>Industrial Tech allowance adjustment [%]:</NPCBonus.TchPct>
+  <NPCBonus.PostAppPct>Post-Industrial Apparel allowance adjustment [%]:</NPCBonus.PostAppPct>
+  <NPCBonus.PostWpnPct>Post-Industrial Weapon allowance adjustment [%]:</NPCBonus.PostWpnPct>
+  <NPCBonus.PostTchPct>Post-Industrial Tech allowance adjustment [%]:</NPCBonus.PostTchPct>
+  <NPCBonus.AffordWeapon>Try to apply minimum affordable weapon allowance for equivalent tech era:</NPCBonus.AffordWeapon>
+  <NPCBonus.Tip>These settings will not apply until after RimWorld is restarted.</NPCBonus.Tip>
+  <NPCBonus.Report>NPC Bonus adjusted: {0} apparel, {1} weapon and {2} tech allowance ranges for pawn kind definitions.</NPCBonus.Report>
+
+</LanguageData>
