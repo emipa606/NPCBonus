@@ -8,24 +8,27 @@
     <li>1.1</li>
     <li>1.2</li>
   </supportedVersions>
-  <description>Update of peladors mod
+  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2000371183
 
-[img]https://i.imgur.com/GYswkZ7.png[/img]
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
 
-Support-chat:
-https://invite.gg/mlie
-
-Non-steam version:
-https://github.com/emipa606/NPCBonus
+[table]
+	[tr]
+		[td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+		[td][url=https://github.com/emipa606/NPCBonus][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+	[/tr]
+[/table]
 	
---- Original Description ---
-Overview
+[img]https://i.imgur.com/NOW7jU1.png[/img]
+
+[h1]Overview[/h1] V1.1
 
 Apply balancing allowance factors to NPC AI. Helps to "balance the books" for NPCs if you are using modded elements.
 
 
-Mod Details
+[h1]Mod Details[/h1]
 
 This mod adjusts the pawn allowance values for NPC Factions. It does this by providing mod options for the player to apply percentage adjustments to the base max and min values of the pawn kind allowance details.
 
@@ -43,31 +46,45 @@ Note if you apply a negative adjustment value or if the allowance values haven't
 
 There is also an option to try and make the minimum weapon allowance value to be the lowest weapon value for the associated technological era for the pawn kinds (if the base setting is lower (wouldn't normally be so)). This is to try and ensure that pawns can at least afford a weapon. However, If the pawn kind doesn't have tags or other circumstances why it cannot use a weapon then as per pawn generation checks they may still not receive a weapon as equipment. Also this minimum cannot super-cede the maximum value. This is mostly to maintain design considerations that may be relevant by the original mod author. This setting combines with the above percentage adjustments and takes the adjusted values into account to see which is best to be applied.
 
-Reasoning
+[h1]Reasoning[/h1]
 
 1) It allows for players to have another metric they can adjust to vary difficulty. Though remembering that events are applied based on points it means that the overall difficulty will be about the same as set by the incident or event, but that the quality of the pawn's equipment for those added will vary based on the adjustments added.
 
 2) It was envisaged that with modded elements in addition to factions as game content that there needed to be a way for players to vary allowances in order to afford additional modded game content. This could be improved mod weapon items, additional clothing items and/or additional items in new layers (e.g. gloves, boots ...). And when considering that modded elements have the possibility of introducing more expensive items due to their improvements, then it seemed sensible to provide something for NPCs to also gain more potential access to these items.
 
-In principal this means that using relatively small adjustments (e.g. less than 25%) allows for some additional balance considerations when compared to Player colonist potential use or capabilities, though this will be dependant on individual mod content. (Note the option of a negative offset does make things "easier" as in principal this lowers the NPCs allowance ranges or potential quality of equipment, but was added for completeness in case anyone wanted to apply offsets in this manner).
+In principal this means that using relatively small adjustments (e.g. -lt 25%) allows for some additional balance considerations when compared to Player colonist potential use or capabilities, though this will be dependant on individual mod content. (Note the option of a negative offset does make things "easier" as in principal this lowers the NPCs allowance ranges or potential quality of equipment, but was added for completeness in case anyone wanted to apply offsets in this manner).
 
 Applying large values will make the NPC be more capable on average to afford the very best tech available, especially if their pawn kind information tags them to use specific items where possible (though this could be by design). This comes with a "warning" however, since applying larger setting values will skew NPC equipment to make it begin to be more homogenised (less variety) as the tendency of equipment use will move towards the better tech available on average.
 
 Note that since this modifies the max and min values of the allowance ranges, there will still be some variance based on the actual value for the pawn applied by the generator in the game. As such results will vary, but at least the adjusted allowances allow for a greater potential of NPCs being able to have an adjusted equipping potential on average.
 
 
-Mod Notes
+[h1]Mod Notes[/h1]
 
 Can be added and removed from save games.
 
 Since mod content choices between players is very variable, it has been applied as a tool for players to estimate and find their own best settings based on their game play styles and content choices.
 
 
-Compatibility Notes
+[h1]Compatibility Notes[/h1]
 
 Expected to work with and will apply to any mod that applies allowances values for their pawn kind definitions and also for any faction that is defined in the above associated tech levels.
 
 Would suggest adding this mod at the end of the mod list or at least after any faction mods. (This is just a catch all precaution in case other mods also apply C# tools to vary or introduce their allowance values.)
+
+
+[h1]Github[/h1]
+
+https://github.com/PeladorRW/NPCBonus
+
+
+[h1]Pelador's Discord[/h1]
+
+https://discord.gg/CFNP26C
+
+[h1]V1.1 Collection[/h1]
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=2012817741
 
 
 
