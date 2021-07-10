@@ -14,5 +14,4 @@
   <NPCBonus.AffordWeapon>Try to apply minimum affordable weapon allowance for equivalent tech era:</NPCBonus.AffordWeapon>
   <NPCBonus.Tip>These settings will not apply until after RimWorld is restarted.</NPCBonus.Tip>
   <NPCBonus.Report>NPC Bonus adjusted: {0} apparel, {1} weapon and {2} tech allowance ranges for pawn kind definitions.</NPCBonus.Report>
-
 </LanguageData>
