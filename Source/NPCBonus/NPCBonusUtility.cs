@@ -7,7 +7,7 @@ namespace NPCBonus;
 
 public class NPCBonusUtility
 {
-    private static List<ThingStuffPair> allWeaponPairs = new List<ThingStuffPair>();
+    private static List<ThingStuffPair> allWeaponPairs = [];
 
     public static float GetMinWeaponValue(PawnKindDef PKD)
     {
