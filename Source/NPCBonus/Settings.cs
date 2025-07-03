@@ -25,60 +25,60 @@ public class Settings : ModSettings
 
     public static bool AffordWeapon;
 
-    public void DoWindowContents(Rect canvas)
+    public static void DoWindowContents(Rect canvas)
     {
-        var listing_Standard = new Listing_Standard { ColumnWidth = canvas.width };
-        listing_Standard.Begin(canvas);
-        var num = 2f;
-        listing_Standard.Gap(num);
-        var max = 100f;
-        var min = -10f;
+        var listingStandard = new Listing_Standard { ColumnWidth = canvas.width };
+        listingStandard.Begin(canvas);
+        const float gapSize = 2f;
+        listingStandard.Gap(gapSize);
+        const float max = 100f;
+        const float min = -10f;
         checked
         {
-            listing_Standard.Label("NPCBonus.PreAppPct".Translate() + "  " + (int)PreAppPct);
-            PreAppPct = (int)listing_Standard.Slider((int)PreAppPct, min, max);
-            listing_Standard.Gap(num);
-            listing_Standard.Label("NPCBonus.PreWpnPct".Translate() + "  " + (int)PreWpnPct);
-            PreWpnPct = (int)listing_Standard.Slider((int)PreWpnPct, min, max);
-            listing_Standard.Gap(num);
-            listing_Standard.Label("NPCBonus.PreTchPct".Translate() + "  " + (int)PreTchPct);
-            PreTchPct = (int)listing_Standard.Slider((int)PreTchPct, min, max);
-            listing_Standard.Gap(num);
-            listing_Standard.Label("NPCBonus.AppPct".Translate() + "  " + (int)AppPct);
-            AppPct = (int)listing_Standard.Slider((int)AppPct, min, max);
-            listing_Standard.Gap(num);
-            listing_Standard.Label("NPCBonus.WpnPct".Translate() + "  " + (int)WpnPct);
-            WpnPct = (int)listing_Standard.Slider((int)WpnPct, min, max);
-            listing_Standard.Gap(num);
-            listing_Standard.Label("NPCBonus.TchPct".Translate() + "  " + (int)TchPct);
-            TchPct = (int)listing_Standard.Slider((int)TchPct, min, max);
-            listing_Standard.Gap(num);
-            listing_Standard.Label("NPCBonus.PostAppPct".Translate() + "  " + (int)PostAppPct);
-            PostAppPct = (int)listing_Standard.Slider((int)PostAppPct, min, max);
-            listing_Standard.Gap(num);
-            listing_Standard.Label("NPCBonus.PostWpnPct".Translate() + "  " + (int)PostWpnPct);
-            PostWpnPct = (int)listing_Standard.Slider((int)PostWpnPct, min, max);
-            listing_Standard.Gap(num);
-            listing_Standard.Label("NPCBonus.PostTchPct".Translate() + "  " + (int)PostTchPct);
-            PostTchPct = (int)listing_Standard.Slider((int)PostTchPct, min, max);
-            listing_Standard.Gap(num);
-            listing_Standard.CheckboxLabeled("NPCBonus.AffordWeapon".Translate(), ref AffordWeapon);
+            listingStandard.Label("NPCBonus.PreAppPct".Translate() + "  " + (int)PreAppPct);
+            PreAppPct = (int)listingStandard.Slider((int)PreAppPct, min, max);
+            listingStandard.Gap(gapSize);
+            listingStandard.Label("NPCBonus.PreWpnPct".Translate() + "  " + (int)PreWpnPct);
+            PreWpnPct = (int)listingStandard.Slider((int)PreWpnPct, min, max);
+            listingStandard.Gap(gapSize);
+            listingStandard.Label("NPCBonus.PreTchPct".Translate() + "  " + (int)PreTchPct);
+            PreTchPct = (int)listingStandard.Slider((int)PreTchPct, min, max);
+            listingStandard.Gap(gapSize);
+            listingStandard.Label("NPCBonus.AppPct".Translate() + "  " + (int)AppPct);
+            AppPct = (int)listingStandard.Slider((int)AppPct, min, max);
+            listingStandard.Gap(gapSize);
+            listingStandard.Label("NPCBonus.WpnPct".Translate() + "  " + (int)WpnPct);
+            WpnPct = (int)listingStandard.Slider((int)WpnPct, min, max);
+            listingStandard.Gap(gapSize);
+            listingStandard.Label("NPCBonus.TchPct".Translate() + "  " + (int)TchPct);
+            TchPct = (int)listingStandard.Slider((int)TchPct, min, max);
+            listingStandard.Gap(gapSize);
+            listingStandard.Label("NPCBonus.PostAppPct".Translate() + "  " + (int)PostAppPct);
+            PostAppPct = (int)listingStandard.Slider((int)PostAppPct, min, max);
+            listingStandard.Gap(gapSize);
+            listingStandard.Label("NPCBonus.PostWpnPct".Translate() + "  " + (int)PostWpnPct);
+            PostWpnPct = (int)listingStandard.Slider((int)PostWpnPct, min, max);
+            listingStandard.Gap(gapSize);
+            listingStandard.Label("NPCBonus.PostTchPct".Translate() + "  " + (int)PostTchPct);
+            PostTchPct = (int)listingStandard.Slider((int)PostTchPct, min, max);
+            listingStandard.Gap(gapSize);
+            listingStandard.CheckboxLabeled("NPCBonus.AffordWeapon".Translate(), ref AffordWeapon);
         }
 
-        listing_Standard.Gap(num * 2f);
+        listingStandard.Gap(gapSize * 2f);
         Text.Font = GameFont.Tiny;
-        listing_Standard.Label("          " + "NPCBonus.Tip".Translate());
+        listingStandard.Label("          " + "NPCBonus.Tip".Translate());
         Text.Font = GameFont.Small;
-        listing_Standard.Gap(num);
-        if (Controller.currentVersion != null)
+        listingStandard.Gap(gapSize);
+        if (Controller.CurrentVersion != null)
         {
-            listing_Standard.Gap();
+            listingStandard.Gap();
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("NPCBonus.CurrentModVersion".Translate(Controller.currentVersion));
+            listingStandard.Label("NPCBonus.CurrentModVersion".Translate(Controller.CurrentVersion));
             GUI.contentColor = Color.white;
         }
 
-        listing_Standard.End();
+        listingStandard.End();
     }
 
     public override void ExposeData()

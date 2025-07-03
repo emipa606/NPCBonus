@@ -8,10 +8,10 @@ internal static class NPCBonus_Initializer
 {
     static NPCBonus_Initializer()
     {
-        LongEventHandler.QueueLongEvent(Setup, "LibraryStartup", false, null);
+        LongEventHandler.QueueLongEvent(setup, "LibraryStartup", false, null);
     }
 
-    public static void Setup()
+    private static void setup()
     {
         var allDefsListForReading = DefDatabase<PawnKindDef>.AllDefsListForReading;
         if (allDefsListForReading.Count <= 0)
@@ -24,9 +24,9 @@ internal static class NPCBonus_Initializer
         var num3 = 0;
         foreach (var pawnKindDef in allDefsListForReading)
         {
-            if (pawnKindDef?.defaultFactionType == null ||
-                pawnKindDef.defaultFactionType.isPlayer || !NPCBonusUtility.GetAdjVal(
-                    pawnKindDef.defaultFactionType.techLevel, out var num4, out var num5,
+            if (pawnKindDef?.defaultFactionDef == null ||
+                pawnKindDef.defaultFactionDef.isPlayer || !NPCBonusUtility.GetAdjVal(
+                    pawnKindDef.defaultFactionDef.techLevel, out var num4, out var num5,
                     out var num6))
             {
                 continue;

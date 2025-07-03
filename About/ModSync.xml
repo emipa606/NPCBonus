@@ -2,7 +2,7 @@
 <ModSyncNinjaData>
   <ID>c41c1ef2-e2ca-481b-a2c4-1ced6843cc8c</ID>
   <ModName>NPC Bonus (Continued)</ModName>
-  <Version>1.5.0</Version>
+  <Version>1.6.0</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
     <Owner>emipa606</Owner>
@@ -12,3 +12,4 @@
     <Branch>master</Branch>
   </Host>
 </ModSyncNinjaData>
+

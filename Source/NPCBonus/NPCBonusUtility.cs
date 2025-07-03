@@ -9,11 +9,11 @@ public class NPCBonusUtility
 {
     private static List<ThingStuffPair> allWeaponPairs = [];
 
-    public static float GetMinWeaponValue(PawnKindDef PKD)
+    public static float GetMinWeaponValue(PawnKindDef pawnKindDef)
     {
-        var min = PKD.weaponMoney.min;
-        var num = PKD.weaponMoney.max;
-        if (PKD.weaponTags == null || PKD.weaponTags.Count == 0)
+        var min = pawnKindDef.weaponMoney.min;
+        var num = pawnKindDef.weaponMoney.max;
+        if (pawnKindDef.weaponTags == null || pawnKindDef.weaponTags.Count == 0)
         {
             return min;
         }
@@ -25,12 +25,12 @@ public class NPCBonusUtility
             allWeaponPairs = list;
         }
 
-        if (PKD.defaultFactionType == null)
+        if (pawnKindDef.defaultFactionDef == null)
         {
             return min;
         }
 
-        var minCompareTechLevel = GetMinCompareTechLevel(PKD.defaultFactionType.techLevel);
+        var minCompareTechLevel = getMinCompareTechLevel(pawnKindDef.defaultFactionDef.techLevel);
         if (GetAdjVal(minCompareTechLevel, out _, out var num4, out _) && num4 != 0f)
         {
             num = Math.Max(num * ((num4 + 100f) / 100f), 0f);
@@ -58,24 +58,22 @@ public class NPCBonusUtility
         return min;
     }
 
-    private static TechLevel GetMinCompareTechLevel(TechLevel TL)
+    private static TechLevel getMinCompareTechLevel(TechLevel techLevel)
     {
-        if (TL == TechLevel.Neolithic || TL == TechLevel.Medieval)
+        switch (techLevel)
         {
-            return TechLevel.Neolithic;
+            case TechLevel.Neolithic:
+            case TechLevel.Medieval:
+                return TechLevel.Neolithic;
+            case TechLevel.Industrial:
+                return TechLevel.Industrial;
+            case TechLevel.Spacer:
+            case TechLevel.Ultra:
+            case TechLevel.Archotech:
+                return TechLevel.Spacer;
+            default:
+                return TechLevel.Neolithic;
         }
-
-        if (TL == TechLevel.Industrial)
-        {
-            return TechLevel.Industrial;
-        }
-
-        if (TL == TechLevel.Spacer || TL == TechLevel.Ultra || TL == TechLevel.Archotech)
-        {
-            return TechLevel.Spacer;
-        }
-
-        return TechLevel.Neolithic;
     }
 
     internal static bool GetAdjVal(TechLevel tech, out float app, out float wpn, out float tch)
@@ -85,11 +83,6 @@ public class NPCBonusUtility
         switch (tech)
         {
             case TechLevel.Neolithic:
-                result = true;
-                app = Settings.PreAppPct;
-                wpn = Settings.PreWpnPct;
-                tch = Settings.PreTchPct;
-                break;
             case TechLevel.Medieval:
                 result = true;
                 app = Settings.PreAppPct;
@@ -103,17 +96,7 @@ public class NPCBonusUtility
                 tch = Settings.TchPct;
                 break;
             case TechLevel.Spacer:
-                result = true;
-                app = Settings.PostAppPct;
-                wpn = Settings.PostWpnPct;
-                tch = Settings.PostTchPct;
-                break;
             case TechLevel.Ultra:
-                result = true;
-                app = Settings.PostAppPct;
-                wpn = Settings.PostWpnPct;
-                tch = Settings.PostTchPct;
-                break;
             case TechLevel.Archotech:
                 result = true;
                 app = Settings.PostAppPct;
