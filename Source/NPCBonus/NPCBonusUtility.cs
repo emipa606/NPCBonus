@@ -5,7 +5,7 @@ using Verse;
 
 namespace NPCBonus;
 
-public class NPCBonusUtility
+public static class NPCBonusUtility
 {
     private static List<ThingStuffPair> allWeaponPairs = [];
 
